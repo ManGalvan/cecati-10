@@ -1,0 +1,7 @@
+.purple_border {
+    box-shadow: 4px 4px 1px #9D143A;
+}
+
+.black_border {
+    box-shadow: 4px 4px 1px rgb(0, 0, 0);
+}
