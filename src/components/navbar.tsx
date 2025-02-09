@@ -1,7 +1,7 @@
 "use client"
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import logo from "@/app/logo cecati.png"
+import logo from "../../public/logo cecati.png"
 import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
@@ -29,8 +29,8 @@ export default function Navbar() {
                 </a>
                 <div className="hidden md:flex space-x-6">
                     <a href="#" className={`${scrolling ? "text-white hover:text-slate-400" : "text-gray-800 hover:text-[#9D143A]"} hover:underline`}>Inicio</a>
-                    <a href="#" className={`${scrolling ? "text-white hover:text-slate-400" : "text-gray-800 hover:text-[#9D143A]"} hover:underline`}>Servicios</a>
-                    <a href="#" className={`${scrolling ? "text-white hover:text-slate-400" : "text-gray-800 hover:text-[#9D143A]"} hover:underline`}>Contacto</a>
+                    {/* <a href="#" className={`${scrolling ? "text-white hover:text-slate-400" : "text-gray-800 hover:text-[#9D143A]"} hover:underline`}>Servicios</a> */}
+                    <a href="#ubication" className={`${scrolling ? "text-white hover:text-slate-400" : "text-gray-800 hover:text-[#9D143A]"} hover:underline`}>Contacto</a>
                 </div>
                 <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
                     {menuOpen ? (
@@ -54,15 +54,15 @@ export default function Navbar() {
                 >
                     Inicio
                 </a>
-                <a
+                {/* <a
                     href="#"
                     className="text-gray-800 hover:text-[#9D143A] hover:underline py-2"
                     onClick={() => setMenuOpen(false)}
                 >
                     Servicios
-                </a>
+                </a> */}
                 <a
-                    href="#"
+                    href="#ubication"
                     className="text-gray-800 hover:text-[#9D143A] hover:underline py-2"
                     onClick={() => setMenuOpen(false)}
                 >
