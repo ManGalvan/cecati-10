@@ -23,7 +23,7 @@ const MapEmbed: React.FC = () => {
             <p className="text-xl"><strong>Dirección:</strong> <br/> Lucio Blanco #1315 <br/> Colonia Fierro <br/> CP. 64590 <br/> Mty, Nuevo León</p>
             <p className="text-xl"><strong>Teléfonos de atención:</strong> <br/>81-29-55-48-51 <br/> 81-29-55-48-52</p>
             </div>
-            <p className="text-xl"><strong>Horarios de atención:</strong><br/>Lunes a sábado de 8:00 a 20:00 hrs</p>
+            <p className="text-xl"><strong>Horarios de atención:</strong><br/>Lunes a Viernes de 8:00 a 20:00 hrs <br /> Sábado de 8:00 a 12:00 hrs</p>
         </div>
       </div>
     </>
