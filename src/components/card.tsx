@@ -42,6 +42,39 @@ export default function Card() {
           para el sector productivo o el autoempleo.
         </div>
       </div>
+      <div className="w-full flex flex-col md:flex-row justify-around gap-10">
+        <div className="relative mx-2 my-12 md:m-16 ">
+          <div id="mision" className="absolute py-3 px-7 right-0 -top-2 -translate-y-3/4 translate-x-5 border border-black black_border bg-[#9D143A] text-white font-bold text-3xl">
+            VALORES
+          </div>
+          <div className="purple_border p-8 border border-black">
+            <ul>
+              <li>Orgullo por la institución</li>
+              <li>Responsabilidad</li>
+              <li>Honestidad</li>
+              <li>Comportamiento ético</li>
+              <li>Respeto por la naturaleza</li>
+              <li>Compromiso</li>
+              <li>Respeto</li>
+              <li>Empatía</li>
+              <li>Solidaridad</li>
+              <li>Disciplina</li>
+            </ul>
+          </div>
+        </div>
+        <div className="relative mx-2 my-12 md:m-16 ">
+          <div id="vision" className="absolute py-3 px-7 -left-8 -top-2 -translate-y-3/4 translate-x-1 border border-black black_border bg-[#9D143A] text-white font-bold text-3xl">
+            OBJETIVOS DE CALIDAD
+          </div>
+          <div className="purple_border p-8 border border-black">
+            <ul>
+              <li>Productividad</li>
+              <li>Satisfacción del cliente</li>
+              <li>Mejora continua</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
