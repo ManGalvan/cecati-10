@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import logo from "../../public/logo cecati.png"
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
 
 export default function Navbar() {
     const [scrolling, setScrolling] = useState(false);
@@ -28,9 +29,27 @@ export default function Navbar() {
                     />
                 </a>
                 <div className="hidden md:flex space-x-6">
-                    <a href="#" className={`${scrolling ? "text-white hover:text-slate-400" : "text-gray-800 hover:text-[#9D143A]"} hover:underline`}>Inicio</a>
+                    <Link
+                        className={`${scrolling ? "text-white hover:text-slate-400" : "text-gray-800 hover:text-[#9D143A]"} hover:underline`}
+                        href={"/"}
+                    >
+                        Inicio
+                    </Link>
+                    <Link
+                        className={`${scrolling ? "text-white hover:text-slate-400" : "text-gray-800 hover:text-[#9D143A]"} hover:underline`}
+                        href={"/cursos"}
+                    >
+                        Cursos
+                    </Link>
+                    {/* <Link
+                        className={`${scrolling ? "text-white hover:text-slate-400" : "text-gray-800 hover:text-[#9D143A]"} hover:underline`}
+                        href={"/"}
+                    >
+                        Contacto
+                    </Link> */}
+                    {/* <a href="#" className={`${scrolling ? "text-white hover:text-slate-400" : "text-gray-800 hover:text-[#9D143A]"} hover:underline`}>Inicio</a> */}
                     {/* <a href="#" className={`${scrolling ? "text-white hover:text-slate-400" : "text-gray-800 hover:text-[#9D143A]"} hover:underline`}>Servicios</a> */}
-                    <a href="#ubication" className={`${scrolling ? "text-white hover:text-slate-400" : "text-gray-800 hover:text-[#9D143A]"} hover:underline`}>Contacto</a>
+                    {/* <a href="#ubication" className={`${scrolling ? "text-white hover:text-slate-400" : "text-gray-800 hover:text-[#9D143A]"} hover:underline`}>Contacto</a> */}
                 </div>
                 <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
                     {menuOpen ? (
@@ -47,27 +66,34 @@ export default function Navbar() {
                     menuOpen ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
                 } absolute left-0 w-full top-full z-40`}
             >
-                <a
-                    href="#"
+                <Link
+                    className="text-gray-800 hover:text-[#9D143A] hover:underline py-2"
+                    onClick={() => setMenuOpen(false)}
+                    href={"/"}
+                >
+                    Inicio
+                </Link>
+                {/* <a
+                    href="/"
                     className="text-gray-800 hover:text-[#9D143A] hover:underline py-2"
                     onClick={() => setMenuOpen(false)}
                 >
                     Inicio
-                </a>
-                {/* <a
-                    href="#"
+                </a> */}
+                <Link
+                    href={"/cursos"}
                     className="text-gray-800 hover:text-[#9D143A] hover:underline py-2"
                     onClick={() => setMenuOpen(false)}
                 >
-                    Servicios
-                </a> */}
-                <a
-                    href="#ubication"
+                    Cursos
+                </Link>
+                {/* <Link
+                    href={"/"}
                     className="text-gray-800 hover:text-[#9D143A] hover:underline py-2"
                     onClick={() => setMenuOpen(false)}
                 >
                     Contacto
-                </a>
+                </Link> */}
             </div>
         </header>
     );
