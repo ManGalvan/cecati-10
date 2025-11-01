@@ -1,60 +1,87 @@
 "use client";
+
 import Image from "next/image";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import { Pagination, Autoplay } from "swiper/modules";
+import ImageList from '@mui/material/ImageList';
+import ImageListItem from '@mui/material/ImageListItem';
+import { useMediaQuery, useTheme } from '@mui/material';
 
 import info1 from "../../public/informacion/info 1.jpg";
 import info2 from "../../public/informacion/info 2.jpg";
 import info3 from "../../public/informacion/info 3.jpg";
 import info4 from "../../public/informacion/info 4.jpg";
 
-export default function InfoSwiper() {
-  return (
-    <section className="w-full py-16">
-      {/* Título */}
-      <div className="flex justify-center text-center mb-10">
-        <h1
-          id="objetivos"
-          className="py-3 px-7 border border-black bg-[#9D143A] text-white font-bold text-3xl rounded-lg shadow-md"
-        >
-          INFORMACIÓN ADICIONAL
-        </h1>
-      </div>
+export default function InfoImageList() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const isTablet = useMediaQuery(theme.breakpoints.between('sm', 'md'));
+  
+  const cols = isMobile ? 1 : isTablet ? 2 : 3;
 
-      {/* Carrusel */}
-      <div className="max-w-6xl mx-auto px-4 md:px-8">
-        <Swiper
-          modules={[Pagination, Autoplay]}
-          spaceBetween={24}
-          slidesPerView={1}
-          pagination={{ clickable: true }}
-          autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true,
+  const images = [
+    { src: info1, alt: "Información sobre inscripciones" },
+    { src: info2, alt: "Costos y requisitos" },
+    { src: info3, alt: "Horarios disponibles" },
+    { src: info4, alt: "Contacto y ubicación" }
+  ];
+
+  return (
+    <>
+    <div className="flex justify-center w-full -translate-y-32 md:-translate-y-20 text-center mt-10">
+        <h1 id="objetivos" className="py-3 px-7 translate-y-3/4 border border-black black_border bg-[#9D143A] text-white font-bold text-3xl">
+            INFORMACIÓN ADICIONAL
+        </h1>
+    </div>
+    <section className="w-full">
+
+      {/* ImageList centrado */}
+      <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+        <ImageList 
+          cols={cols} 
+          gap={16}
+          sx={{ 
+            width: '100%', 
+            margin: 0,
+            overflow: 'visible',
+            // Centra el contenido
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'center',
+            listStyle: 'none',
+            padding: 0,
           }}
-          breakpoints={{
-            480: { slidesPerView: 1 },
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-          }}
-          className="pb-10"
         >
-          {[info1, info2, info3, info4].map((img, i) => (
-            <SwiperSlide key={i}>
-              <div className="relative w-full h-72 sm:h-80 md:h-96 lg:h-[28rem] rounded-xl overflow-hidden shadow-lg bg-white flex justify-center items-center group">
+          {images.map((image, index) => (
+            <ImageListItem 
+              key={index}
+              sx={{
+                // Ancho fijo según columnas
+                width: isMobile ? '100%' : isTablet ? 'calc(50% - 8px)' : 'calc(33.333% - 11px)',
+                maxWidth: '400px', // Límite máximo para que no se vean muy grandes
+                borderRadius: '8px',
+                overflow: 'hidden',
+                boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+                transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                '&:hover': {
+                  transform: 'scale(1.03)',
+                  boxShadow: '0 8px 12px rgba(0, 0, 0, 0.15)',
+                }
+              }}
+            >
+              <div style={{ position: 'relative', width: '100%', paddingBottom: '133.33%' }}>
                 <Image
-                  src={img}
-                  alt={`Imagen informativa ${i + 1}`}
-                  className="object-contain w-full h-full transition-transform duration-700 group-hover:scale-105"
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
+                  className="object-contain"
+                  style={{ position: 'absolute', top: 0, left: 0 }}
                 />
               </div>
-            </SwiperSlide>
+            </ImageListItem>
           ))}
-        </Swiper>
+        </ImageList>
       </div>
     </section>
+    </>
   );
 }

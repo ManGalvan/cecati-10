@@ -12,7 +12,7 @@ export default function Cursos() {
             ALGUNOS DE NUESTROS CURSOS
         </h1>
     </div>
-    <div className="w-full flex flex-col lg:flex-row lg:justify-between">
+    <div className="w-full flex flex-col lg:flex-row lg:justify-between mb-20">
         {/* CARD MAQUINAS Y HERRAMIENTAS */}
         <div className="self-center max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
           <a href="#">
