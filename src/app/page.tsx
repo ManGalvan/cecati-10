@@ -30,7 +30,7 @@ export default function Home() {
               <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
                 <Card />
                 <Cursos/>
-                <Info />
+                {/* <Info /> */}
                 <MapEmbed />
               </main>
             </div>
