@@ -2,16 +2,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import banner from "../../../public/banners/banner.jpg";
-import Curso1 from "../../../public/cursos/curso1.jpg";
-import Curso2 from "../../../public/cursos/curso2.jpg";
-import Curso3 from "../../../public/cursos/curso3.jpg";
-import Curso4 from "../../../public/cursos/curso4.jpg";
-import Curso5 from "../../../public/cursos/curso5.jpg";
-import Curso6 from "../../../public/cursos/curso6.jpg";
-import Curso7 from "../../../public/cursos/curso7.jpg";
-import Curso8 from "../../../public/cursos/curso8.jpg";
-import Curso9 from "../../../public/cursos/curso9.jpg";
-import Curso10 from "../../../public/cursos/curso10.jpg";
 import cnc from "../../../public/cursos/cnc.jpg";
 import dibujo from "../../../public/cursos/dibujo.jpg";
 import soldadura from "../../../public/cursos/soldadura.jpg";
