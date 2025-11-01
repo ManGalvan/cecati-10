@@ -5,7 +5,7 @@ import Card from '@/components/card';
 import SwiperComponent from "@/components/swiper";
 import MapEmbed from "@/components/map";
 import Cursos from "@/components/cursos";
-import Info from "@/components/info";
+// import Info from "@/components/info";
 
 export const metadata: Metadata = {
     title: "Inicio - Cecati 10",
