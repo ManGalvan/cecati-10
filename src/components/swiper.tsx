@@ -5,9 +5,10 @@ import 'swiper/css'; // Importa los estilos básicos de Swiper
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-import banner1 from '../../public/banner.jpg';
-import banner2 from '../../public/img1.jpg';
-import banner3 from '../../public/img5.jpg';
+import banner1 from '../../public/banners/banner.jpg';
+import banner2 from '../../public/banners/banner 2.jpg';
+import banner3 from '../../public/banners/banner 3.jpg';
+import banner4 from '../../public/banners/banner 4.jpg';
 
 export default function SwiperComponent() {
   return (
@@ -24,49 +25,65 @@ export default function SwiperComponent() {
         <SwiperSlide>
           <div className="relative w-full h-full">
             <Image
-              className="object-contain md:object-cover w-full h-full brightness-90 filter"
+              className="object-contain md:object-fill w-full brightness-90 filter"
               src={banner1}
               alt="Imagen representativa acerca de informacion relevante"
               layout="fill"
             />
-            <div className="absolute m-0 md:m-20 bottom-0 left-0 w-full bg-[#9D143A] md:bg-none p-4">
+            {/*<div className="absolute m-0 md:m-20 bottom-0 left-0 w-full bg-[#9D143A] md:bg-none p-4">
               <h2 className="text-xl md:text-5xl font-bold text-white [text-shadow:_0_1px_2px_rgba(0,0,0,0.4)]
               md:[text-shadow:_0_3px_6px_rgba(0,0,0,0.6)]           
               lg:[text-shadow:_0_4px_8px_rgba(0,0,0,0.8)]">
                 Bienvenido a nuestra plataforma</h2>
-            </div>
+            </div> */}
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="relative w-full h-full">
             <Image
-              className="object-contain md:object-cover w-full h-full brightness-90 filter"
+              className="object-contain md:object-fill w-full brightness-90 filter"
               src={banner2}
               alt="Imagen representativa acerca de informacion relevante"
               layout="fill"
             />
-            <div className="absolute m-0 md:m-20 bottom-0 left-0 bg-[#9D143A] md:bg-none w-full p-4">
+            {/* <div className="absolute m-0 md:m-20 bottom-0 left-0 bg-[#9D143A] md:bg-none w-full p-4">
               <h2 className="text-2xl md:text-5xl  font-bold text-white [text-shadow:_0_1px_2px_rgba(0,0,0,0.4)]
               md:[text-shadow:_0_3px_6px_rgba(0,0,0,0.6)]           
               lg:[text-shadow:_0_4px_8px_rgba(0,0,0,0.8)]">
                 Innovación y futuro juntos</h2>
-            </div>
+            </div> */}
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="relative w-full h-full">
             <Image
-              className="object-contain md:object-cover w-full h-full brightness-90 filter"
+              className="object-contain md:object-fill w-full brightness-90 filter"
               src={banner3}
               alt="Imagen representativa acerca de informacion relevante"
               layout="fill"
             />
-            <div className="m-0 md:m-20 absolute bottom-0 bg-[#9D143A] md:bg-none left-0 w-full p-4">
+            {/* <div className="m-0 md:m-20 absolute bottom-0 bg-[#9D143A] md:bg-none left-0 w-full p-4">
               <h2 className="text-2xl md:text-5xl  font-bold text-white [text-shadow:_0_1px_2px_rgba(0,0,0,0.4)]
               md:[text-shadow:_0_3px_6px_rgba(0,0,0,0.6)]           
               lg:[text-shadow:_0_4px_8px_rgba(0,0,0,0.8)]">
                 Comprometidos con el éxito</h2>
-            </div>
+            </div> */}
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="relative w-full h-full">
+            <Image
+              className="object-contain md:object-fill w-full brightness-90 filter"
+              src={banner4}
+              alt="Imagen representativa acerca de informacion relevante"
+              layout="fill"
+            />
+            {/* <div className="m-0 md:m-20 absolute bottom-0 bg-[#9D143A] md:bg-none left-0 w-full p-4">
+              <h2 className="text-2xl md:text-5xl  font-bold text-white [text-shadow:_0_1px_2px_rgba(0,0,0,0.4)]
+              md:[text-shadow:_0_3px_6px_rgba(0,0,0,0.6)]           
+              lg:[text-shadow:_0_4px_8px_rgba(0,0,0,0.8)]">
+                Comprometidos con el éxito</h2>
+            </div> */}
           </div>
         </SwiperSlide>
       </Swiper>
